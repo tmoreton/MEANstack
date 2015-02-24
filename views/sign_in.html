@@ -1,0 +1,32 @@
+<!-- sign_in.html -->
+{% extends "layout.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+        </div>
+        <div class="col-lg-4">
+          <form class="form-signin" action='/sign_in/submit' method='POST'>
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <label for="inputName" class="sr-only">Name</label>
+              <input name="name" type="name" id="inputName" class="form-control" placeholder="Name" required autofocus>
+            <br>
+            <label for="inputEmail" class="sr-only">Email address</label>
+              <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <br>
+            <label for="inputPassword" class="sr-only">Password</label>
+              <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          </form>
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+  </body>
+{% endblock %}
